@@ -11,8 +11,7 @@
 section.slide {
   background-image: url('pusher-med.png') !important;
   background-repeat: no-repeat !important;
-  background-position-x: 95% !important;
-  background-position-y: 100% !important;
+  background-position: 95% 100% !important;
   background-size: 30% !important;
 }
 
