@@ -1,0 +1,12 @@
+h1 { font-size: 2em; }
+h2 { font-size: 1.2em; }
+body { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 100%; }
+
+/* Squares */
+.draggable { width: 7em; height: 7em; top: 5em; left: 18em; padding: 0.5em; position: absolute; text-align: center; }
+
+/* Presence list */
+#presence { width: 10em; border: 1px solid #dddddd; padding: 1em; background-color: #eee; top: 2em; right: 2em; }
+#presence h2 { margin: 0.2em 0; }
+#presence ul { padding: 0; }
+#presence li { margin: 0 0 0 1.5em; list-style-type: bullet;}

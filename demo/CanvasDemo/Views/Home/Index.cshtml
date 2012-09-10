@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Demo</title>
+        
+        <link type="text/css" href="Content/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />		
+        <link type="text/css" href="Content/Site.css" rel="stylesheet" />		
+
+        <script src="Scripts/jquery-1.8.0.min.js"></script>
+		<script src="Scripts/jquery-ui-1.8.23.custom.min.js"></script>		
+        <script src="Scripts/pusher.min.js"></script>
+        <script src="Scripts/canvasdemo.js"></script>    
+
+    </head>
+    
+    <body>
+    
+        <h1 id="title">Welcome...</h1>
+    
+        <p><button id="addshape">Add Square</button></p>
+    
+        <!-- Div to add squares to -->
+        <div id="canvas">
+        </div>
+    
+        <!-- Who's online list -->
+        <div id="presence">
+            <h2 >Who's Online?</h2>
+            <ul id="presenceList" />
+        </div>        
+
+        <!-- Enter name dialog box -->
+	    <div id="nameDialog" title="Welcome...">
+		    <p>Please enter your name:</p>
+            <p><input type="text" id="username" maxlength="20" /></p>
+	    </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,55 @@
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\EntityFramework.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\Newtonsoft.Json.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\PusherRESTDotNet.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\EntityFramework.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\Newtonsoft.Json.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\bin\Newtonsoft.Json.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\obj\Debug\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\CanvasDemo\CanvasDemo\obj\Debug\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\EntityFramework.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\Newtonsoft.Json.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\PusherRESTDotNet.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\EntityFramework.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\Newtonsoft.Json.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\bin\Newtonsoft.Json.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\obj\Debug\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\0_Complete\CanvasDemo\obj\Debug\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\EntityFramework.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\Newtonsoft.Json.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\PusherRESTDotNet.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\EntityFramework.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\Newtonsoft.Json.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\bin\Newtonsoft.Json.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\obj\Debug\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\1_Start\CanvasDemo\obj\Debug\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\EntityFramework.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\Newtonsoft.Json.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\PusherRESTDotNet.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\EntityFramework.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\Newtonsoft.Json.pdb
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\bin\Newtonsoft.Json.xml
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\obj\Debug\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\383 Conference\Demos\Live\CanvasDemo\obj\Debug\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\CanvasDemo.pdb
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\EntityFramework.dll
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\Newtonsoft.Json.dll
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\PusherRESTDotNet.dll
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\EntityFramework.xml
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\Newtonsoft.Json.pdb
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\bin\Newtonsoft.Json.xml
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\obj\Debug\CanvasDemo.dll
+C:\Users\Richard\Documents\Pusher\GitHub\canvasconf\demo\CanvasDemo\obj\Debug\CanvasDemo.pdb
