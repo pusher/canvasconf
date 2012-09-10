@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ready" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Delivering Realtime Apps with Pusher</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="./resources/deck.core.css">
+	<link rel="stylesheet" href="./resources/deck.goto.css">
+	<link rel="stylesheet" href="./resources/deck.menu.css">
+	<link rel="stylesheet" href="./resources/deck.navigation.css">
+	<link rel="stylesheet" href="./resources/deck.status.css">
+	<link rel="stylesheet" href="./resources/deck.hash.css">
+	
+	<link rel="stylesheet" id="transition-theme-link" href="./resources/horizontal-slide.css">
+	<link rel="stylesheet" href="./resources/jquery.snippet.min.css" type="text/css">
+	
+	
+	<!-- Custom CSS just for this page -->
+    <link rel="stylesheet" href="./resources/styles.css">
+	
+	<script src="./resources/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container on-slide-0 on-slide-title-slide">
+
+    <!-- Title Slide -->
+    <section class="slide markdown deck-current" id="title-slide">
+	    <h1>Delivering Realtime Apps with Pusher</h1>
+    </section>
+
+    <!-- Who Am I? -->
+    <section class="slide markdown just-bullets deck-next" id="whoami">
+        <h2>Who Am I?</h2>
+        <ul>
+            <li>Rich Caudle</li>
+            <li>Developer Evangelist at Pusher</li>
+            <li><a href="http://twitter.com/rich_caudle">@rich_caudle</a></li>
+            <li><a href="mailto:rich@pusher.com">rich@pusher.com</a></li>
+            <li><a href="http://www.pusher.com">pusher.com</a></li>
+        </ul>
+    </section>
+
+    <!-- Overview -->
+    <section class="slide markdown just-bullets deck-next" id="overview">
+        <h2>What Will I Talk About?</h2>
+        <ul>
+            <li>What is the Realtime Web?</li>
+            <li>Why does it matter?</li>
+            <li>What can we deliver?</li>
+            <li>Realtime Technologies</li>
+            <li>What is Pusher?</li>
+            <li>Live Coding / Demos</li>
+        </ul>
+    </section>
+
+    <!-- What is the Realtime Web? (1) -->
+    <section class="slide markdown deck-next" id="realtimeweb1">
+        <h2>What is the Realtime Web?</h2>
+        <p><blockquote cite="http://en.wikipedia.org/wiki/Real-time_web">The real-time web is a set of technologies and practices that enable users to receive information as soon as it is published by its authors, rather than requiring that they or their software check a source periodically for updates.</blockquote></p>
+        <p>Source: <a href="http://en.wikipedia.org/wiki/Real-time_web">Wikipedia: Realtime web</a></p>
+    </section>
+
+    <!-- What is the Realtime Web? (2) -->
+    <section class="slide markdown just-bullets deck-next" id="realtimeweb2">
+        <h2>What is the Realtime Web?</h2>
+        <ul>
+            <li>Trading Applications</li>
+            <li>Early Definition - Discoverability (Robert Scoble)</li>
+            <li>Later Definition
+				<ul>
+					<li>Subscribe to data we want</li>
+					<li>Data pushed to us in realtime</li>
+				</ul>
+			</li>
+        </ul>
+    </section>
+
+    <!-- Why does it matter? -->
+    <section class="slide markdown just-bullets deck-next" id="whymatter">
+        <h2>Why does it matter?</h2>
+        <ul>
+            <li>Opportunity</li>
+            <li>Convenience</li>
+            <li>Interaction</li>
+            <li>Engagement</li>
+			<li><strong>People are demanding it!</strong></li>
+        </ul>
+    </section>
+
+    <!-- What can we deliver? -->
+    <section class="slide markdown just-bullets deck-next" id="whatdeliver">
+        <h2>What can you deliver?</h2>
+        <ul>
+            <li>Data! Live Content</li>
+            <li>Collaboration apps</li>
+            <li>Multiplayer games</li>
+            <li>Activity streams</li>
+            <li>Notifications</li>
+            <li>Chat</li>
+            <li>Second Screen Experiences</li>
+        </ul>
+    </section>
+
+<!-- Realtime Technologies -->
+<section class="slide markdown just-bullets deck-next" id="technologies">
+    <h2>Realtime Technologies</h2>
+    <ul>
+        <li>History
+            <ul>
+                <li>Java Applets</li>
+                <li>Polling</li>
+            </ul>
+        </li>        
+        <li>Comet
+            <ul>
+                <li>Long Polling</li>
+                <li>Streaming</li>
+            </ul>
+        </li>
+        <li>Today
+            <ul>
+                <li>Server Sent Events (EventSource API)</li>
+                <li>HTML5 Websockets</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<!-- Websockets -->
+<section class="slide markdown deck-next" id="websockets">
+    <h2>Websockets</h2>
+    <ul>
+        <li>Protocol and API</li>
+        <li>Single bi-directional connection, <strong>cross domain</strong></li>
+    </ul>
+    <div class="snippet-container" style="undefined;"><div class="sh_whitengrey snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a class="snippet-copy sh_url" href="#" style="display: none; ">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="php sh_php snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> ws =</li><li>  <span class="sh_keyword">new</span> <span class="sh_function">WebSocket</span>(<span class="sh_string">'ws://mywebsocketserver.com:80'</span>);</li><li>ws.onopen = <span class="sh_function">new</span>() {</li><li>  <span class="sh_comment">// connection established</span></li><li>};</li><li>ws.onmessage = <span class="sh_keyword">function</span>(ev) { <span class="sh_comment">// receive a message</span></li><li>  ws.<span class="sh_function">send</span>(<span class="sh_string">"Yep, got: "</span> + ev.data); <span class="sh_comment">// send a message</span></li><li>  ws.<span class="sh_function">close</span>();</li><li>};</li><li>ws.onerror = <span class="sh_keyword">function</span>(ev) {}</li><li>ws.onclose = <span class="sh_keyword">function</span>(ev) {};</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">        
+var ws =
+  new WebSocket("ws://mywebsocketserver.com:80");
+ws.onopen = function() {
+  // connection established
+};
+ws.onmessage = function(ev) { // receive a message
+  ws.send("Yep, got: " + ev.data); // send a message
+  ws.close();
+};
+ws.onerror = function(ev) {}
+ws.onclose = function(ev) {};
+</pre></div></div>
+</section>
+
+<section class="slide markdown deck-next just-bullets" id="websocketsupport">
+    <h2>Websocket Support</h2>
+    <img src="./resources/websocket_support.png" alt="Websocket Support">
+    <ul>
+        <li>Can use on IE6, IE7, IE8, IE9 and other older mainstream browsers with <a href="https://github.com/gimite/web-socket-js">web-socket-js Polyfil</a></li>
+        <li>Can use on Android with <a href="http://en.wikipedia.org/wiki/Adobe_Flash_Lite">FlashLite</a>, or using Firefox or Chrome for Android.</li>
+        <li>Source: <a href="http://caniuse.com">caniuse.com</a></li>
+    </ul>
+</section>
+
+<section class="slide markdown just-bullets deck-next" id="whatdowewant">
+    <h2>We Need More...</h2>
+    <ul>
+        <li>Connect (fallback, connection management)</li>
+        <li>Subscribe
+            <ul>
+                <li>Channels</li>
+                <li>Events</li>
+                <li>Data</li>
+            </ul>
+        </li>
+        <li>Publish
+            <ul>
+                <li>Channels</li>
+                <li>Events</li>
+                <li>Data</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<!-- What is Pusher? -->
+<section class="slide markdown just-bullets deck-next" id="whatispusher1">
+    <h2>What is Pusher?</h2>    
+    <ul>
+        <li>Cloud-hosted platform</li>
+        <li>Scalable</li>
+        <li>Supported</li>
+        <li>Builds on Websockets</li>
+        <li>Provides publish & subscribe features</li>
+        <li>Client & server-side libraries</li>
+    </ul>
+</section>
+
+<section class="slide markdown deck-next just-bullets" id="connecting">
+    <h2>Connecting to Pusher</h2>    
+    <ul>
+        <li>Create an account at <a href="http://pusher.com">pusher.com</a></li>
+        <li>Create an application
+            <ul>
+                <li><strong>Key</strong> <em>- for client connections</em></li>
+                <li><strong>ID</strong>, <strong>Secret</strong> <em>- for server-side connections</em></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="snippet-container" style="undefined;"><div class="sh_whitengrey snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a class="snippet-copy sh_url" href="#" style="display: none; ">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> pusher <span class="sh_symbol">=</span> <span class="sh_keyword">new</span> <span class="sh_function">Pusher</span><span class="sh_symbol">(</span><span class="sh_string">'YOUR_APP_KEY'</span><span class="sh_symbol">);</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">var pusher = new Pusher('YOUR_APP_KEY');</pre></div></div>
+    <div class="snippet-container" style="undefined;"><div class="sh_whitengrey snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a class="snippet-copy sh_url" href="#" style="display: none; ">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_variable">$pusher</span> <span class="sh_symbol">=</span> <span class="sh_keyword">new</span> <span class="sh_function">Pusher</span><span class="sh_symbol">(</span><span class="sh_variable">$key</span><span class="sh_symbol">,</span> <span class="sh_variable">$secret</span><span class="sh_symbol">,</span> <span class="sh_variable">$app_id</span><span class="sh_symbol">);</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">$pusher = new Pusher($key, $secret, $app_id);</pre></div></div>
+</pre></div></div>
+
+</section>
+
+<section class="slide markdown just-bullets deck-next" id="channeltypes">
+    <h2>Channels</h2>    
+    <ul>
+        <li>Filter / organise data</li>
+        <li>Restrict access to data</li>
+        <li>Types: <em>public, private, presence</em></li>
+        <li>Events are pushed to channels</li>
+        <li>Events carry a data payload (JSON object)</li>
+        <li>Subscribers receive events on channels they subscribe to</li>
+    </ul>
+</section>
+
+<section class="slide markdown deck-next" id="subscribe">
+    <h2>Subscribe</h2>    
+    <div class="snippet-container" style="undefined;"><div class="sh_whitengrey snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a class="snippet-copy sh_url" href="#" style="display: none; ">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> pusher <span class="sh_symbol">=</span> <span class="sh_keyword">new</span> <span class="sh_function">Pusher</span><span class="sh_symbol">(</span><span class="sh_string">'YOUR_APP_KEY'</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> channel <span class="sh_symbol">=</span> pusher<span class="sh_symbol">.</span><span class="sh_function">subscribe</span><span class="sh_symbol">(</span><span class="sh_string">'channel-name'</span><span class="sh_symbol">);</span></li><li>channel<span class="sh_symbol">.</span><span class="sh_function">bind</span><span class="sh_symbol">(</span><span class="sh_string">'event_name'</span><span class="sh_symbol">,</span> <span class="sh_keyword">function</span><span class="sh_symbol">(</span>eventData<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span></li><li>  <span class="sh_comment">// do stuff</span></li><li><span class="sh_cbracket">}</span><span class="sh_symbol">);</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">var pusher = new Pusher('YOUR_APP_KEY');
+var channel = pusher.subscribe('channel-name');
+channel.bind('event_name', function(eventData) {
+  // do stuff
+});
+</pre></div></div>
+</section>
+
+<section class="slide markdown deck-next just-bullets" id="publish1">
+    <h2>Where do I publish events from?</h2> 
+    
+    <img class="side" src="./resources/trigger_events.png" alt="Triggering Events">
+    <ul class="side" style="padding-left: 3em; padding-top: 2em">
+        <li>Client or Server?</li>
+        <li>Security considerations
+        <li>Data validation</li>
+    </ul>
+    
+</section>
+
+<section class="slide markdown deck-next" id="publish2">
+    <h2>Publish - Server</h2>    
+    <div class="snippet-container" style="undefined;"><div class="sh_whitengrey snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a class="snippet-copy sh_url" href="#" style="display: none; ">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="php sh_php snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_function">require</span>(<span class="sh_string">'Pusher.php'</span>);</li><li><span class="sh_function">require</span>(<span class="sh_string">'config.php'</span>);</li>
+    <li><span class="sh_variable">$pusher</span> <span class="sh_symbol">=</span> <span class="sh_keyword">new</span> <span class="sh_function">Pusher</span><span class="sh_symbol">(</span><span class="sh_variable">$key</span><span class="sh_symbol">,</span> <span class="sh_variable">$secret</span><span class="sh_symbol">,</span> <span class="sh_variable">$app_id</span><span class="sh_symbol">);</span></li><li><span class="sh_variable">$pusher</span><span class="sh_symbol">-&gt;</span><span class="sh_function">trigger</span><span class="sh_symbol">(</span><span class="sh_string">'channel-name'</span><span class="sh_symbol">,</span></li><li>                 <span class="sh_string">'event_name'</span><span class="sh_symbol">,</span></li><li>                 <span class="sh_keyword">array</span><span class="sh_symbol">(</span><span class="sh_string">'msg'</span> <span class="sh_symbol">=&gt;</span> <span class="sh_string">'Hello world!'</span><span class="sh_symbol">)</span> <span class="sh_symbol">);</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">require('Pusher.php');
+require('config.php');
+
+$pusher = new Pusher($key, $secret, $app_id);
+$pusher-&gt;trigger('channel-name',
+                 'event_name',
+                 array('msg' =&gt; 'Hello world!') );
+</pre></div></div>
+
+</section>
+
+<section class="slide markdown deck-next" id="publish3">
+    <h2>Publish - Client</h2>    
+    
+    <div class="snippet-container" style="undefined;"><div class="sh_whitengrey snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a class="snippet-copy sh_url" href="#" style="display: none; ">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="php sh_php snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> triggerPusher = <span class="sh_keyword">new</span> <span class="sh_function">Pusher</span>(<span class="sh_string">'a71b8d8b7eef0ef6d98c'</span>);</li><li><span class="sh_keyword">var</span> triggerChannel = triggerPusher.<span class="sh_function">subscribe</span>(<span class="sh_string">'example-channel'</span>);</li>
+    <li><span class="sh_keyword">function</span> <span class="sh_function">publish</span>() {</li><li>  <span class="sh_keyword">if</span>(triggerPusher.connection.state !== <span class="sh_string">'connected'</span>) {</li><li>    triggerChannel.<span class="sh_function">trigger</span>(<span class="sh_string">'client-new_trigger'</span>,</li><li>      {</li><li>        name: $(<span class="sh_string">'#name'</span>).<span class="sh_function">val</span>(),</li><li>        text: $(<span class="sh_string">'#text'</span>).<span class="sh_function">val</span>()</li><li>      });</li><li>  }</li><li>}</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">var triggerPusher = new Pusher('a71b8d8b7eef0ef6d98c');
+
+var triggerChannel = triggerPusher.subscribe('example-channel');
+
+function publish() {
+  if(triggerPusher.connection.state !== 'connected') {
+  triggerChannel.trigger('client-new_trigger',
+                  {
+                    name: $('#name').val(),
+                    text: $('#text').val()
+                  });
+                  }
+}
+</pre></div></div>
+
+</section>
+
+<!-- Live Coding Demo! -->
+<section class="slide markdown just-bullets deck-next" id="livecoding">
+    <h2>Live Coding</h2>
+    <p>(Never do a live demo...)</p>
+    <ul>
+        <li>Connecting to Pusher</li>
+        <li>Authentication</li>
+        <li>Subscribing to channels / events</li>
+        <li>Publishing channels / events</li>
+    </ul>
+</section>
+
+<!-- Who Uses Pusher? -->
+<section class="slide markdown just-bullets deck-next" id="whouses">
+    <h2>Who Uses Pusher?</h2>
+    <h3>Demos</h3>
+    <ul>
+        <li>Multiplayer Game<br /><a target="_blank" href="http://ghosts.heroku.com">ghosts.heroku.com</a></li>
+        <li>Collaboration<br /><a target="_blank" href="http://codr.cc">codr.cc</a></li>
+    </ul>
+    <h3>Other clients...</h3>
+</section>
+
+<section class="slide pusher-top markdown just-bullets deck-next" id="itvnews">
+    <h2>ITV News</h2>
+    <div id="screenshot">
+        <img src="./resources/itvnews.png" alt="ITV News">
+    </div>
+</section>
+
+<section class="slide pusher-top markdown just-bullets deck-next" id="gauges">
+    <h2>Gaug.es</h2>
+    <div id="screenshot">
+        <img src="./resources/gauges.png" alt="Gaug.es">
+    </div>
+</section>
+
+<section class="slide pusher-top markdown just-bullets deck-next" id="heroku">
+    <h2>Heroku</h2>
+    <div id="screenshot">
+        <img src="./resources/heroku-status.png" alt="Heroku Status">
+    </div>
+</section>
+
+<section class="slide pusher-top markdown just-bullets deck-next" id="mailchimp">
+    <h2>MailChimp</h2>
+    <div id="screenshot">
+        <img src="./resources/mailchimp.png" alt="MailChimp">
+    </div>
+</section>
+
+<section class="slide pusher-top markdown just-bullets deck-next" id="word2">
+    <h2>Word<sup>2</sup></h2>
+    <div id="screenshot">
+        <img src="./resources/word2.png" alt="MailChimp">
+    </div>
+</section>
+
+<section class="slide pusher-top markdown just-bullets deck-next" id="word2map">
+    <h2>Word<sup>2</sup></h2>
+    <div id="screenshot">
+        <img src="./resources/word2_map.png" alt="MailChimp">
+    </div>
+</section>
+
+<!-- Why Pusher? -->
+<section class="slide markdown just-bullets deck-next" id="whatispusher3">
+    <h2>Why Pusher?</h2>    
+    <ul>
+        <li>Makes delivering Realtime applications easy</li>
+        <li>Quick, Easy &amp; Secure</li>
+        <li>Massively Scalable</li>
+        <li>Fallbacks</li>
+        <li>Spend time building stuff...</li>
+        <li>Not configuring infrastructure</li>
+    </ul>
+</section>
+
+<section class="slide markdown just-bullets deck-after" id="get_started">
+    <h2>Try us out</h2>
+    <ul>
+        <li><strong>FREE</strong> Sandbox account</li>
+        <li><a href="http://twitter.com/rich_caudle">@rich_caudle</a></li>
+        <li><a href="mailto:rich@pusher.com">rich@pusher.com</a></li>
+        <li><a href="http://www.pusher.com">pusher.com</a></li>
+    </ul>
+</section>
+
+<a href="#" class="deck-prev-link deck-nav-disabled" title="Previous">←</a>
+<a href="#overview" class="deck-next-link" title="Next">→</a>
+
+<p class="deck-status">
+	<span class="deck-status-current">1</span>
+	/
+	<span class="deck-status-total">11</span>
+</p>
+
+<form action="./resources/Pusher.htm" method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"><option value="title-slide"></option><option value="overview"></option><option value="realtime_apps"></option><option value="realtime_uses"></option><option value="activity_streams"></option><option value="realtime_games_w2_map"></option><option value="realtime_games_w2"></option><option value="realtime_games_w2_map"></option><option value="why_pusher"></option><option value="websockets"></option><option value="get_started"></option></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<a href="./resources/Pusher.htm" title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+  <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script-->
+  <script>window.jQuery || document.write('<script src="./resources/jquery-1.7.min.js"><\/script>')</script><script src="./resources/jquery-1.7.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="./resources/deck.core.js"></script>
+<script src="./resources/deck.hash.js"></script>
+<script src="./resources/deck.menu.js"></script>
+<script src="./resources/deck.goto.js"></script>
+<script src="./resources/deck.status.js"></script>
+<script src="./resources/deck.navigation.js"></script>
+
+<script src="./resources/deck.showdown.js"></script>
+
+<script src="./resources/jquery.snippet.min.js"></script>
+
+
+<!-- Specific to this page -->
+<script src="./resources/index.js"></script>
+
+
+
+</body></html>
