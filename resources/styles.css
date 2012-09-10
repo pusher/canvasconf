@@ -1,0 +1,182 @@
+/* snippet */
+.snippet-wrap pre.sh_sourceCode {
+  line-height: 1em !important;
+  padding: 0 !important;
+}
+
+.deck-container #title-slide.slide h1 {
+  font-size: 3em;
+}
+
+section.slide {
+  background-image: url('pusher-med.png') !important;
+  background-repeat: no-repeat !important;
+  background-position-x: 95% !important;
+  background-position-y: 100% !important;
+  background-size: 30% !important;
+}
+
+section.slide.pusher-top {
+  background-image: url('pusher_vertical_P_w_text.png') !important;
+  background-repeat: no-repeat !important;
+  background-position-x: 95% !important;
+  background-position-y: 0% !important;
+  background-size: 20%;
+}
+
+.slide.big-pusher {
+  background-image: url('pusher-big.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;  
+  background-size: 98% !important;  
+}
+
+.side {
+  width: 43%; 
+  float: left;
+}
+
+section.slide.image h2 {
+  position: relative;
+  z-index: 100;
+  margin-top: 0.5em !important;
+  padding-top: 0 !important;
+}
+
+section.slide.image h2.light {
+  color: white;
+  background-image: url('trans.png');
+}
+
+section.slide.image img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slide aside.notes {
+  display: none;
+}
+
+.slide.big-pusher ul {
+  position: absolute;
+  bottom: 10%;
+}
+
+.slide .tick {
+  color: green;
+  font-weight: bold;
+}
+
+.slide .cross {
+  color: red;
+  font-weight: bold;  
+}
+
+.slide .boo {
+  font-size: 0.5em;
+  color: red;
+}
+
+.deck-container {
+  font-size: 1.4em;
+
+  /* W3C */
+  background-attachment: fixed;
+
+  background-color: #D7D7D7 !important;
+}
+
+.deck-container section.slide {
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  
+  background: white;
+  border: 2px solid white;
+  padding: 44px 40px 20px 40px;
+  box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+  -moz-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+  -webkit-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+}
+
+.deck-container .slide h1 {
+  font-size: 2em;
+}
+
+.deck-container .slide h1 small,
+.deck-container .slide h2 small {
+  font-size: 0.5em;
+  color: #D7D7D7
+}
+
+.slide.image {
+  list-style: none;
+}
+
+.deck-container section.slide.just-bullets ul li {
+  font-size: 1.3em !important;
+}
+
+.deck-container section.slide.just-bullets ul li ul,
+.deck-container section.slide.just-bullets ul li p
+{
+  margin-bottom: 0;
+}
+
+.deck-container section.slide.just-bullets ul li ul li {
+  font-size: 0.8em !important;
+}
+
+.slide blockquote {
+  font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1em;
+  padding: 1em 2em .5em 2em;
+  color: black;
+  background: white;
+  position: relative;
+  border: 1px solid #CDE;
+  z-index: auto;
+  border-image: initial;
+}
+
+.slide blockquote::before {
+  content: "“";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 5em;
+  line-height: 1;
+  color: #CCF0F0;
+  z-index: 1;
+}
+
+.slide small {
+  font-size: 0.75em;
+}
+
+.deck-container section.slide ul li {
+  font-size: 0.8em;
+}
+
+
+
+#technologies ul li, #whatdowewant ul li, #channeltypes ul li
+{
+    padding: 0.1em;
+}
+
+#screenshot
+{
+    height: 22em; 
+    width: 39em; 
+    overflow: hidden;
+}
